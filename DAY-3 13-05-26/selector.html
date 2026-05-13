@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Invitation 🎂</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, sans-serif;
+            background:#fff4f4;
+            color:#333;
+            line-height:1.6;
+        }
+
+        #main-header{
+            background:linear-gradient(to right,#1421d4,#604b99);
+            color:white;
+            text-align:center;
+            padding:50px;
+        }
+
+        .highlight{
+            color:rgb(171, 181, 209);
+            font-weight:bold;
+        }
+
+        nav{
+            background:white;
+            padding:15px;
+            position:sticky;
+            top:0;
+            box-shadow:0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul{
+            display:flex;
+            justify-content:center;
+            list-style:none;
+        }
+
+        nav ul li{
+            margin:0 15px;
+        }
+
+        nav ul li a{
+            text-decoration:none;
+            color:#ff6b6b;
+            font-weight:bold;
+        }
+
+        nav ul li a:hover{
+            color:rgb(172, 79, 79);
+        }
+
+        main{
+            width:90%;
+            margin:auto;
+        }
+
+        section{
+            background:white;
+            margin:25px 0;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 4px 8px rgba(0,0,0,0.08);
+        }
+
+        h2{
+            color:#782a88;
+            margin-bottom:15px;
+        }
+
+        h1,h2,h3{
+            font-family:Verdana;
+        }
+
+        .gallery > div{
+            background:#f5f5f5;
+            padding:10px;
+            border-radius:10px;
+        }
+
+        .gallery{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .gallery img{
+            width:100%;
+            border-radius:10px;
+        }
+
+        input[type="text"]{
+            padding:10px;
+            width:100%;
+            margin-top:10px;
+        }
+
+        h2 + p{
+            color:#555;
+        }
+
+        h2 ~ ul{
+            margin-left:20px;
+        }
+
+        audio,video{
+            width:100%;
+            margin-top:15px;
+        }
+
+        iframe{
+            width:100%;
+            border-radius:10px;
+        }
+
+        footer{
+            background:#333;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+        .wish:nth-child(2){
+            background:#fff3cd;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <header id="main-header">
+
+        <h1>Happy Birthday Princess </h1>
+        <p>
+            Welcome to the <span class="highlight">Birthday Celebration</span>
+        </p>
+
+    </header>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#party">Party</a></li>
+            <li><a href="#location">Location</a></li>
+
+        </ul>
+
+    </nav>
+
+    <main>
+
+
+
+        <section id="about">
+
+            <h2>About The Birthday Star 🎂</h2>
+
+            <p>
+                Today is all about happiness, fun,
+                memories and celebration.
+            </p>
+
+        </section>
+
+
+
+        <section id="wishes">
+
+            <h2>Birthday Wishes 💌</h2>
+
+            <div class="wish">
+
+                <h3>From Friends</h3>
+
+                <p>
+                    Wishing you happiness and success forever.
+                </p>
+
+            </div>
+
+            <br>
+
+            <div class="wish">
+
+                <h3>From Family</h3>
+
+                <p>
+                    May your life always stay full of joy and love.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <section id="gallery">
+
+            <h2>Memory Gallery 📸</h2>
+
+            <p>Some beautiful moments together.</p>
+
+            <div class="gallery">
+
+                <div>
+
+                    <img src="" alt="">
+
+                    <p>Birthday Celebration</p>
+
+                </div>
+
+                <div>
+
+                    <img src=" alt="">
+
+                    <p>Friends Party</p>
+
+                </div>
+
+                <div>
+
+                    <img src="" alt="">
+
+                    <p>Beautiful Memories</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="music">
+
+            <h2>Birthday Music 🎶</h2>
+
+            <p>Enjoy the birthday song.</p>
+
+            <audio controls>
+
+                <source src="birthday.mp3" type="audio/mpeg">
+
+            </audio>
+
+        </section>
+
+
+        <section id="video">
+
+            <h2>Birthday Video 🎥</h2>
+
+            <p>Special birthday wishes video.</p>
+
+            <video controls>
+
+                <source src="birthday-video.mp4" type="video/mp4">
+
+            </video>
+
+        </section>
+
+
+        <section id="party">
+
+            <h2>Party Details 🎈</h2>
+
+            <p>Join us for the celebration.</p>
+
+            <ul>
+
+                <li>Date : 16 May 2026</li>
+
+                <li>Time : 7:00 PM</li>
+
+                <li>Venue : Radisson Blu Hotel, Ahmedabad</li>
+
+            </ul>
+
+        </section>
+
+
+        <section id="rsvp">
+
+            <h2>RSVP Form 📝</h2>
+
+            <p>Confirm your attendance.</p>
+
+            <form>
+
+                <input type="text" placeholder="Enter Your Name">
+
+            </form>
+
+        </section>
+
+        <section id="location">
+
+            <h2>Location 📍</h2>
+
+            <p>Party venue on Google Maps.</p>
+
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8732.107918408165!2d72.57029785500134!3d23.045824631116975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8461a2095f23%3A0xca272b244270caea!2sHyatt%20Regency%20Ahmedabad!5e0!3m2!1sen!2sin!4v1778647001018!5m2!1sen!2sin"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+            </iframe>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>Made with ❤️ for Princess's Birthday</p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated Professional Resume</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, sans-serif;
+            background:linear-gradient(to right,#dfe9f3,#ffffff);
+            overflow-x:hidden;
+        }
+
+        .resume{
+            width:1000px;
+            margin:30px auto;
+            display:flex;
+            background:white;
+            box-shadow:0px 0px 20px rgba(0,0,0,0.3);
+            border-radius:20px;
+            overflow:hidden;
+
+            animation:fadeIn 2s ease;
+        }
+
+        @keyframes fadeIn{
+            from{
+                opacity:0;
+                transform:translateY(-80px);
+            }
+
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+        @keyframes slideLeft{
+            from{
+                transform:translateX(-100px);
+                opacity:0;
+            }
+
+            to{
+                transform:translateX(0);
+                opacity:1;
+            }
+        }
+
+        @keyframes slideRight{
+            from{
+                transform:translateX(100px);
+                opacity:0;
+            }
+
+            to{
+                transform:translateX(0);
+                opacity:1;
+            }
+        }
+
+        @keyframes float{
+            0%{
+                transform:translateY(0px);
+            }
+
+            50%{
+                transform:translateY(-10px);
+            }
+
+            100%{
+                transform:translateY(0px);
+            }
+        }
+        .left{
+            width:35%;
+            background:#343a40;
+            color:white;
+            padding:40px 30px;
+
+            animation:slideLeft 2s ease;
+        }
+
+        .profile{
+            text-align:center;
+        }
+
+        .profile img{
+            width:160px;
+            height:160px;
+            border-radius:50%;
+            border:5px solid white;
+            margin-bottom:20px;
+
+            animation:float 3s infinite;
+            transition:1s;
+        }
+
+        .profile img:hover{
+            transform:scale(1.1) rotate(8deg);
+        }
+
+        .profile h1{
+            font-size:35px;
+        }
+
+        .profile p{
+            margin-top:10px;
+            color:#ddd;
+            font-size:20px;
+        }
+
+        .section{
+            margin-top:40px;
+        }
+
+        .section h2{
+            margin-bottom:20px;
+            border-bottom:2px solid white;
+            padding-bottom:10px;
+            font-size:28px;
+        }
+
+        .section p{
+            margin:10px 0;
+            font-size:18px;
+            color:#ddd;
+        }
+
+        .skill{
+            display:flex;
+            justify-content:space-between;
+            margin:12px 0;
+            font-size:18px;
+
+            transition:0.5s;
+        }
+
+        .skill:hover{
+            transform:translateX(10px);
+            color:yellow;
+        }
+        .right{
+            width:65%;
+            padding:40px;
+
+            animation:slideRight 2s ease;
+        }
+
+        .right h2{
+            color:#333;
+            margin-bottom:20px;
+            border-bottom:2px solid #888;
+            padding-bottom:10px;
+            font-size:30px;
+        }
+
+        .about p{
+            line-height:1.8;
+            color:#555;
+            font-size:18px;
+        }
+
+        .experience{
+            margin-top:30px;
+        }
+
+        .job{
+            margin-bottom:35px;
+            position:relative;
+            padding-left:25px;
+            border-left:3px solid #777;
+
+            transition:1s;
+        }
+
+        .job:hover{
+            transform:scale(1.03);
+            background:#f5f5f5;
+            padding:15px 15px 15px 25px;
+            border-radius:10px;
+        }
+
+        .job::before{
+            content:"";
+            width:15px;
+            height:15px;
+            background:#555;
+            border-radius:50%;
+
+            position:absolute;
+            left:-9px;
+            top:5px;
+        }
+
+        .job h3{
+            color:#333;
+            margin-bottom:8px;
+        }
+
+        .date{
+            float:right;
+            color:#777;
+            font-size:16px;
+        }
+
+        .job p{
+            margin-top:10px;
+            line-height:1.7;
+            color:#555;
+        }
+
+        ul{
+            margin-top:10px;
+            margin-left:20px;
+        }
+
+        ul li{
+            margin-bottom:10px;
+            color:#555;
+            line-height:1.6;
+        }
+
+        .resume:hover{
+            transform:scale(1.01);
+            transition:1s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <div class="left">
+            <div class="profile">
+
+                <img src="https://media.istockphoto.com/id/2212478701/vector/monochrome-female-silhouette-with-short-hair.jpg?s=612x612&w=0&k=20&c=Q_6Z6fOgbLwV3lBeCOYybXNNkkeTj8bjUMlIcy8aGtI=" alt="Profile">
+                <h1>Shreha Pujara</h1>
+                <p>B.Tech CSE Student</p>
+            </div>
+
+            <div class="section">
+                <h2>Contact</h2>
+                <p>Email: shreha@gmail.com</p>
+                <p>Phone: +91 9876543210</p>
+                <p>Ahmedabad, Gujarat</p>
+            </div>
+
+            <div class="section">
+
+                <h2>Skills</h2>
+
+                <div class="skill">
+                    <span>HTML</span>
+                    <span>3 years</span>
+                </div>
+
+                <div class="skill">
+                    <span>CSS</span>
+                    <span>3 years</span>
+                </div>
+
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <span>2 years</span>
+                </div>
+
+                <div class="skill">
+                    <span>Python</span>
+                    <span>2 years</span>
+                </div>
+
+                <div class="skill">
+                    <span>C Programming</span>
+                    <span>1 year</span>
+                </div>
+            </div>
+
+            <div class="section">
+
+                <h2>Education</h2>
+                <p><b>B.Tech in CSE</b></p>
+                <p>Silver Oak University</p>
+                <p>2024 - 2028</p>
+                <br>
+
+                <p><b>12th Passed</b></p>
+                <p>2023 - 2024</p>
+                <br>
+
+                <p><b>10th Passed</b></p>
+                <p>2021 - 2022</p>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="about">
+                <h2>About Me</h2>
+                <p>
+                    Motivated and passionate Computer Science Engineering
+                    student with knowledge of web development and programming.
+                    Looking forward to improving technical skills and gaining
+                    practical experience through challenging opportunities.
+                </p>
+            </div>
+
+            <div class="experience">
+                <h2>Projects</h2>
+                <div class="job">
+                    <h3>
+                        Portfolio Website
+                        <span class="date">2025</span>
+                    </h3>
+
+                    <p>
+                        Created a responsive portfolio website
+                        using HTML, CSS and JavaScript.
+                    </p>
+
+                    <ul>
+                        <li>Responsive Design</li>
+                        <li>Modern UI</li>
+                        <li>CSS Animations</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+
+                    <h3>
+                        Student Management System
+                        <span class="date">2024</span>
+                    </h3>
+
+                    <p>
+                        Developed a student management system project
+                        using Python and MySQL.
+                    </p>
+
+                    <ul>
+                        <li>Database Connectivity</li>
+                        <li>User Friendly Interface</li>
+                        <li>Student Record Management</li>
+                    </ul>
+
+                </div>
+
+                <div class="job">
+
+                    <h3>
+                        Online Quiz Application
+                        <span class="date">2024</span>
+                    </h3>
+
+                    <p>
+                        Designed a quiz application with timer and score system.
+                    </p>
+
+                    <ul>
+                        <li>MCQ Based Quiz</li>
+                        <li>Timer Feature</li>
+                        <li>Score Calculation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
