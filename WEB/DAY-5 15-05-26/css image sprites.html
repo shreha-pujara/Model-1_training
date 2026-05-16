@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Image Sprites</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#222;
+            font-family:Arial, sans-serif;
+        }
+
+        .container{
+            display:flex;
+            gap:25px;
+        }
+
+        /* Common Sprite Style */
+        .icon{
+            width:80px;
+            height:80px;
+
+            /* Sprite Image */
+            background-image:url('https://cdn-icons-png.flaticon.com/512/733/733547.png');
+            background-size:320px 80px;
+            background-repeat:no-repeat;
+
+            border-radius:15px;
+            transition:0.4s;
+            cursor:pointer;
+            box-shadow:0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        /* Facebook */
+        .facebook{
+            background-position:0 0;
+        }
+
+        /* Instagram */
+        .instagram{
+            background-position:-80px 0;
+        }
+
+        /* Twitter */
+        .twitter{
+            background-position:-160px 0;
+        }
+
+        /* YouTube */
+        .youtube{
+            background-position:-240px 0;
+        }
+
+        /* Hover Effect */
+        .icon:hover{
+            transform:scale(1.15) rotate(5deg);
+            box-shadow:0 8px 20px rgba(255,255,255,0.4);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="icon facebook"></div>
+        <div class="icon instagram"></div>
+        <div class="icon twitter"></div>
+        <div class="icon youtube"></div>
+
+    </div>
+
+</body>
+</html>

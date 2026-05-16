@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parallax Effect</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:Arial, sans-serif;
+            overflow-x:hidden;
+        }
+
+        /* Parallax Section */
+        .parallax{
+            background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+            height:100vh;
+
+            /* Parallax Effect */
+            background-attachment:fixed;
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size:cover;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .parallax h1{
+            color:white;
+            font-size:70px;
+            background:rgba(0,0,0,0.5);
+            padding:20px 40px;
+            border-radius:15px;
+            letter-spacing:4px;
+        }
+
+        /* Normal Content */
+        .content{
+            padding:80px;
+            text-align:center;
+            background:white;
+        }
+
+        .content h2{
+            font-size:40px;
+            margin-bottom:20px;
+        }
+
+        .content p{
+            font-size:20px;
+            line-height:1.8;
+            color:#444;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Parallax Image -->
+    <div class="parallax">
+        <h1>PARALLAX EFFECT</h1>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <h2>Awesome Scrolling Effect</h2>
+
+        <p>
+            This is a simple HTML and CSS parallax scrolling effect.
+            The background image stays fixed while the content scrolls,
+            creating a beautiful modern website design effect.
+        </p>
+
+    </div>
+
+</body>
+</html>

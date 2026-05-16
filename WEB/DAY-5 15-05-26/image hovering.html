@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Big Image Hover Effect</title>
+
+    <style>
+        body{
+            margin:0;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:#eaeaea;
+        }
+
+        .image-box{
+            width:600px;
+            height:400px;
+            overflow:hidden;
+            border-radius:20px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .image-box img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            transition:0.6s ease;
+        }
+
+        .image-box img:hover{
+            transform:scale(1.15);
+            filter:brightness(80%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="image-box">
+        <img src="https://media.istockphoto.com/id/1067678216/photo/snow-mountain-view-of-leh-ladakh-district-norther-part-of-india.jpg?s=612x612&w=0&k=20&c=Po5iOrWvC4rjxBVc_my1F4w-AOt4bC5AvkbPk9rOs5o="
+        alt="Big Nature Image">
+    </div>
+
+</body>
+</html>
