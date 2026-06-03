@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Increment Age</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        input{
+            padding: 10px;
+            width: 250px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        button{
+            padding: 10px 20px;
+            font-size: 18px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #result{
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Age Increment Program</h2>
+
+    <!-- Name is already shown in the box -->
+    <input type="text" id="name" value="Olivia" readonly>
+
+    <br><br>
+
+    <button onclick="incrementAge()">Increment Age</button>
+
+    <div id="result">
+        Hello, Olivia. You are 30.
+    </div>
+
+    <script>
+        let age = 30;
+
+        function incrementAge() {
+            age++;
+
+            document.getElementById("result").innerHTML =
+                "Hello, Olivia. You are " + age + ".";
+        }
+    </script>
+
+</body>
+</html>
