@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Operation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            background: blue;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: darkblue;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 15px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .edit {
+            background: green;
+        }
+
+        .delete {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student CRUD Operation</h2>
+
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="number" id="age" placeholder="Enter Age">
+
+    <button onclick="addStudent()">Add Student</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="studentTable"></tbody>
+    </table>
+</div>
+
+<script>
+    let students = [];
+    let editIndex = -1;
+
+    function addStudent() {
+        let name = document.getElementById("name").value;
+        let age = document.getElementById("age").value;
+
+        if (name === "" || age === "") {
+            alert("Please fill all fields");
+            return;
+        }
+
+        if (editIndex === -1) {
+            students.push({ name, age });
+        } else {
+            students[editIndex] = { name, age };
+            editIndex = -1;
+        }
+
+        document.getElementById("name").value = "";
+        document.getElementById("age").value = "";
+
+        displayStudents();
+    }
+
+    function displayStudents() {
+        let table = document.getElementById("studentTable");
+        table.innerHTML = "";
+
+        students.forEach((student, index) => {
+            table.innerHTML += `
+                <tr>
+                    <td>${student.name}</td>
+                    <td>${student.age}</td>
+                    <td>
+                        <button class="edit" onclick="editStudent(${index})">Edit</button>
+                        <button class="delete" onclick="deleteStudent(${index})">Delete</button>
+                    </td>
+                </tr>
+            `;
+        });
+    }
+
+    function editStudent(index) {
+        document.getElementById("name").value = students[index].name;
+        document.getElementById("age").value = students[index].age;
+        editIndex = index;
+    }
+
+    function deleteStudent(index) {
+        students.splice(index, 1);
+        displayStudents();
+    }
+</script>
+
+</body>
+</html>
